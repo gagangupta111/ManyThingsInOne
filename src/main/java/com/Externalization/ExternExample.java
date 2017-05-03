@@ -1,0 +1,46 @@
+package com.Externalization;
+
+
+import java.io.*;
+
+public class ExternExample {
+
+    public static void main(String args[]) {
+
+        // create a Car object
+        Car car = new Car("Mitsubishi", 2009);
+        car.setRegNo("9229");
+        car.setMileage("100");
+        Car newCar = null;
+
+        //serialize the car
+        try {
+            FileOutputStream fo = new FileOutputStream("tmp");
+            ObjectOutputStream so = new ObjectOutputStream(fo);
+            so.writeObject(car);
+            so.flush();
+        } catch (Exception e) {
+            System.out.println(e);
+            System.exit(1);
+        }
+
+        // de-serialize the Car
+        try {
+            FileInputStream fi = new FileInputStream("tmp");
+            ObjectInputStream si = new ObjectInputStream(fi);
+            newCar = (Car) si.readObject();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+            System.exit(1);
+        }
+
+	/*
+	 * Print out the original and new car information
+	 */
+        System.out.println("The original car is ");
+        System.out.println(car);
+        System.out.println("The new car is ");
+        System.out.println(newCar);
+    }
+}
