@@ -1,4 +1,4 @@
-package com.DataStructures;
+package com.dataStructures.Tree;
 
 public class Node {
 
@@ -81,7 +81,7 @@ public class Node {
         Node tree = new Node(50, null, null);
         Node node = new Node(25, null, null);
         tree.setLeft(node);
-        node = new Node(12, null, null);
+        node = new Node(90, null, null);
         tree.getLeft().setLeft(node);
         node = new Node(35, null, null);
         tree.getLeft().setRight(node);
