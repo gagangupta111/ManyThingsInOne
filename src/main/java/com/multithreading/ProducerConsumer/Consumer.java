@@ -31,9 +31,11 @@ class Consumer implements Runnable {
         }
 
         synchronized (sharedQueue) {
+
             Thread.sleep((long)(2000));
             System.out.println("CONSUMED : "+ sharedQueue.remove(0));
             sharedQueue.notify();
+
         }
     }
 
