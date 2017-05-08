@@ -1,12 +1,10 @@
-package com.multithreading;
+package com.multithreading.atomic;
 
-// Here listener thread is using MY_INT. This thread is checking if the value of My_INT has changed or not
-// this listener thread does not detect any change, because it keeps the old copy in its thread cache of the same variable.
-// after making it volatile it does not keep cache in its local but instead it does go directly to one common variable.
+import java.util.concurrent.atomic.AtomicInteger;
 
-public class VolatileTest {
+public class AtomicTest {
 
-    private static volatile int MY_INT = 0;
+    private static AtomicInteger MY_INT = new AtomicInteger(0);
 
     public static void main(String[] args) {
 
@@ -19,11 +17,11 @@ public class VolatileTest {
 
         @Override
         public void run() {
-            int local_value = MY_INT;
+            int local_value = MY_INT.intValue();
             while ( local_value < 5){
-                if( local_value!= MY_INT){
+                if( local_value!= MY_INT.intValue()){
                     System.out.println("Got Change for MY_INT : " + MY_INT);
-                    local_value= MY_INT;
+                    local_value= MY_INT.intValue();
                 }
             }
         }
@@ -33,10 +31,10 @@ public class VolatileTest {
         @Override
         public void run() {
 
-            int local_value = MY_INT;
-            while (MY_INT <5){
+            int local_value = MY_INT.intValue();
+            while (MY_INT.intValue() <5){
                 System.out.println("Incrementing MY_INT to {0}" + local_value);
-                MY_INT = ++local_value;
+                MY_INT.set(++local_value);
                 try {
                     Thread.sleep(500);
                 } catch (InterruptedException e) { e.printStackTrace(); }
