@@ -2,6 +2,7 @@ package com.multithreading.lock;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class LockExample {
 
@@ -21,6 +22,9 @@ public class LockExample {
         }
 
         executorService.shutdown();
+
+        java.util.concurrent.locks.Lock lock1 = new ReentrantLock(true);
+
 
     }
 }

@@ -1,7 +1,8 @@
 package com.Serialization;
 
-
 public class Employee implements java.io.Serializable {
+
+    private static final long serialVersionUID = 2L;
 
     public String name;
     public String address;
