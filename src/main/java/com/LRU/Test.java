@@ -4,6 +4,12 @@ import java.util.HashMap;
 
 public class Test {
 
+    static {
+
+        System.out.println(" Before Main");
+
+    }
+
     public static void main(String[] args){
 
         System.out.println(" Hello !");

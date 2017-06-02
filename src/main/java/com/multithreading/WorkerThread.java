@@ -8,7 +8,6 @@ public class WorkerThread implements Runnable {
         this.command=s;
     }
 
-
     public void run() {
         System.out.println(Thread.currentThread().getName()+" Start. Command = "+command);
         processCommand();
