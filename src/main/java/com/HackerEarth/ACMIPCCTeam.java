@@ -3,6 +3,7 @@ package com.HackerEarth;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ACMIPCCTeam {
@@ -17,7 +18,6 @@ public class ACMIPCCTeam {
         int topics = Integer.parseInt(splitted[1]);
 
         int teams = 0;
-        int maxTopics = 0;
         List<Integer> list = new ArrayList<Integer>();
 
         int[][] array = new int[person][topics];
@@ -38,16 +38,32 @@ public class ACMIPCCTeam {
         for (int i = 0; i < person; i++){
             for (int j = i+1; j < person; j++) {
 
+                int zeros = 0;
                 for (int k = 0; k < topics; k++){
                     temp[k] = array[i][k] + array[j][k];
                 }
 
-
-
+                for (int k = 0; k < topics; k++){
+                    if (temp[k] == 0){
+                        zeros++;
+                    }
+                }
+                list.add(zeros);
             }
         }
 
+        Collections.sort(list);
+        int min = list.get(0);
 
+        System.out.println( topics-min );
 
+        for (Integer integer : list){
+            if (integer == min){
+                teams++;
+            }else {
+                break;
+            }
+        }
+        System.out.println(teams);
     }
 }

@@ -1,14 +1,13 @@
 package com.dataStructures.graph;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 
 public class Graph {
 
     private int V;
     private LinkedList<Integer> adj[];
+    private int cycles  = 0;
+    private Stack<Integer> stack = new Stack<Integer>();
 
     Graph(int v) {
 
@@ -23,6 +22,49 @@ public class Graph {
 
         adj[v].add(w);
 
+    }
+
+    public void findPath(int u, int z){
+
+        boolean[] visited = new boolean[V];
+        for (int i = 0; i < visited.length; i++){
+            visited[i] = false;
+        }
+        findPath(u, z, visited);
+        System.out.println(stack);
+
+        if (stack.isEmpty()){
+            System.out.println("empty");
+        }
+
+    }
+
+    public boolean findPath(int u, int z, boolean[] visited) {
+
+        LinkedList<Integer> queue = new LinkedList<Integer>();
+        visited[u] = true;
+        queue.add(u);
+        stack.push(u);
+
+        if (u == z){
+            return true;
+        }
+
+        while (queue.size() != 0) {
+
+            u = queue.poll();
+            Iterator<Integer> i = adj[u].listIterator();
+            while (i.hasNext()) {
+
+                int n = i.next();
+                if (!visited[n]) {
+                    if (findPath(n, z, visited))
+                        return true;
+                }
+            }
+            stack.pop();
+        }
+        return false;
     }
 
     // prints BFS traversal from a given source s
@@ -63,6 +105,7 @@ public class Graph {
 
         Map<Integer, Boolean> visited = new HashMap<Integer, Boolean>();
         DFS(s, visited);
+        System.out.println(" Cycles : " + cycles);
 
     }
 
@@ -90,6 +133,8 @@ public class Graph {
                 int n = i.next();
                 if (visited.get(n) == null || !visited.get(n)) {
                     DFS(n, visited);
+                }else {
+                    cycles++;
                 }
             }
         }
