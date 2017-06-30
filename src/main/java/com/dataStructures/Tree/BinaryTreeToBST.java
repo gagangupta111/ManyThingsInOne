@@ -29,7 +29,7 @@ public class BinaryTreeToBST {
             return;
         }
         inOrderReplace(tree.getLeft());
-        tree.setValue(list.get(i++));
+        tree.setData(list.get(i++));
         inOrderReplace(tree.getRight());
 
     }
@@ -41,7 +41,7 @@ public class BinaryTreeToBST {
         }
 
         convertToArray(tree.getLeft());
-        list.add(tree.getValue());
+        list.add(tree.getData());
         convertToArray(tree.getRight());
 
     }

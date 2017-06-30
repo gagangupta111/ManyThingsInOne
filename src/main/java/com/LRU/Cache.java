@@ -92,7 +92,7 @@ public class Cache {
             Map.Entry thisEntry = (Map.Entry) entries.next();
             Object key = thisEntry.getKey();
             Node value = (Node) thisEntry.getValue();
-            System.out.println(" thisEntry.getKey(); " + key + " thisEntry.getValue(); " + value.getValue());
+            System.out.println(" thisEntry.getKey(); " + key + " thisEntry.getData(); " + value.getValue());
 
         }
 

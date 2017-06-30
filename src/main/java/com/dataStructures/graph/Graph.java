@@ -9,7 +9,7 @@ public class Graph {
     private int cycles  = 0;
     private Stack<Integer> stack = new Stack<Integer>();
 
-    Graph(int v) {
+    public Graph(int v) {
 
         V = v;
         adj = new LinkedList[v];

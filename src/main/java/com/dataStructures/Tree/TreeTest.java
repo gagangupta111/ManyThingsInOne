@@ -12,11 +12,25 @@ public class TreeTest {
         System.out.println();
         tree.inOrder(tree);
 
+        System.out.println(" height " + tree.height(tree));
+        System.out.println(" level order traversal ");
+        tree.levelOrderTraversal(tree);
+
         Node key = new Node(60);
         tree.findPredSucc(key, tree);
 
         System.out.println();
         BTreePrinter.printNode(tree);
+
+        tree = tree.insert(100);
+        BTreePrinter.printNode(tree);
+
+        tree = tree.delete(65);
+        BTreePrinter.printNode(tree);
+
+        tree = tree.delete(75);
+        BTreePrinter.printNode(tree);
+
 
         BinaryTreeToBST binaryTreeToBST = new BinaryTreeToBST();
         binaryTreeToBST.convertToBST(tree);

@@ -7,7 +7,7 @@ public class Lock{
     int lockedResourceCount = 0;
     public int total_threads = 0;
 
-    public synchronized void lock()
+    public void lock()
             throws InterruptedException{
 
         Thread callingThread = Thread.currentThread();
