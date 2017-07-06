@@ -33,7 +33,16 @@ public class GraphTest {
         // g.DFSUtil(2);
 
         System.out.println(" Find path ");
-        g.findPath(0,5);
+        g.findPath(0,8);
+
+        System.out.println(" Find path ");
+        g.findPath(0,7);
+
+        System.out.println(" No Of Edges ");
+        System.out.println(g.noOfEdges(0,8));
+
+        System.out.println(" No Of Edges ");
+        System.out.println(g.noOfEdges(0,7));
 
     }
 }

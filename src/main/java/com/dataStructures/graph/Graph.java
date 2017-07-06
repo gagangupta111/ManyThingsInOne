@@ -18,14 +18,28 @@ public class Graph {
 
     }
 
-    void addEdge(int v, int w) {
+    public void addEdge(int v, int w) {
 
         adj[v].add(w);
 
     }
 
+    public int noOfEdges(int u, int z){
+
+        stack = new Stack<Integer>();
+        boolean[] visited = new boolean[V];
+        for (int i = 0; i < visited.length; i++){
+            visited[i] = false;
+        }
+        findPath(u, z, visited);
+
+        return stack.size()==0 ? 0 : stack.size() - 1;
+
+    }
+
     public void findPath(int u, int z){
 
+        stack = new Stack<Integer>();
         boolean[] visited = new boolean[V];
         for (int i = 0; i < visited.length; i++){
             visited[i] = false;

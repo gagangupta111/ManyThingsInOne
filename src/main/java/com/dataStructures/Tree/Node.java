@@ -4,10 +4,10 @@ import java.util.LinkedList;
 
 public class Node {
 
-    int data, height;
-    Node left;
-    Node right;
-    private static int count = 0;
+    public int data, height, depth;
+    public Node left;
+    public Node right;
+    public static int count = 0;
 
     public int getData() {
         return data;
@@ -267,7 +267,7 @@ public class Node {
             return;
         }
         inOrder(tree.left);
-        System.out.println(tree.data);
+        System.out.print(tree.data + " ");
         inOrder(tree.right);
 
     }
@@ -291,7 +291,7 @@ public class Node {
 
         postOrder(tree.left);
         postOrder(tree.right);
-        System.out.println(tree.data);
+        System.out.print(tree.data + " ");
 
     }
 
