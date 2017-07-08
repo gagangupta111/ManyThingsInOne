@@ -6,7 +6,7 @@ public class ExpandChemistryFormula {
 
     public static void main(String[] args) {
 
-        String string = "(CH3(CO)2CA)6";
+        String string = "(CH3(CO)2CA)2";
         char[] chars = string.toCharArray();
         Stack<Character> stack = new Stack<Character>();
         CharacterStack characterStack = new CharacterStack(stack);
