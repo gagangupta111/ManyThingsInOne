@@ -24,7 +24,7 @@ public class GameOfTwoStacks {
 
             line = br.readLine();
             split  = line.split("\\s+");
-            H_Stack h_stack_1 = new H_Stack();
+            Stack<Integer> h_stack_1 = new Stack<Integer>();
             int j = split.length - 1;
             for (  ; j >= 0; j--){
                 h_stack_1.push(Integer.parseInt(split[j]));
@@ -32,43 +32,130 @@ public class GameOfTwoStacks {
 
             line = br.readLine();
             split  = line.split("\\s+");
-            H_Stack h_stack_2 = new H_Stack();
+            Stack<Integer> h_stack_2 = new Stack<Integer>();
             j = split.length - 1;
             for (  ; j >= 0; j--){
                 h_stack_2.push(Integer.parseInt(split[j]));
             }
 
-            while (!h_stack_1.isEmpty() && !h_stack_2.isEmpty() && totalSum < maxHeight){
+            // initialize stack of height 1 here
+            Stack_Of_Height stack_of_height_1 = new Stack_Of_Height();
+            while (!h_stack_1.isEmpty() && stack_of_height_1.getHeight() + h_stack_1.peek() <= maxHeight){
+                stack_of_height_1.push(h_stack_1.pop());
+            }
 
-                if (h_stack_1.getElement() < h_stack_2.getElement()){
-                    totalSum += h_stack_2.getElement();
-                    h_stack_2.pop();
-                    elementsRemoved++;
-                }else {
-                    totalSum += h_stack_2.getElement();
-                    h_stack_2.pop();
-                    elementsRemoved++;
+            Stack_Of_Height stack_of_height_2 = new Stack_Of_Height();
+            while (true){
+
+                // keep on adding elements in stack of height 2 from stack 2.
+                int stack_1_height = stack_of_height_1.getHeight();
+                while (!h_stack_2.isEmpty() && stack_of_height_2.getHeight() + stack_1_height + h_stack_2.peek()<= maxHeight){
+                    stack_of_height_2.push(h_stack_2.pop());
                 }
 
-            }
+                // count total no of elements.
+                int totalSize = stack_of_height_1.size() + stack_of_height_2.size();
+                if (totalSize > elementsRemoved){
+                    elementsRemoved = totalSize;
+                }
 
-            H_Stack non_empty_stack = new H_Stack();
-            if (h_stack_1.isEmpty()) {
-                non_empty_stack = h_stack_2;
-            }else if (h_stack_2.isEmpty()){
-                non_empty_stack = h_stack_1;
-            }
+                // check if stack of height 1 it is not empty, in that case program should leave.
+                if (stack_of_height_1.isEmpty()){
+                    break;
+                }
 
-            while (!non_empty_stack.isEmpty() && totalSum < maxHeight){
-                totalSum += non_empty_stack.getElement();
-                non_empty_stack.pop();
-                elementsRemoved++;
-            }
+                stack_of_height_1.pop();
 
+            }
 
             System.out.println(elementsRemoved);
 
         }
+    }
+
+}
+
+class Stack_Of_Height{
+
+    private Stack<Pair_Of_Ele_Height> stack = new Stack<Pair_Of_Ele_Height>();
+
+    public int size(){
+        return stack.size();
+    }
+
+    public boolean isEmpty(){
+        return stack.isEmpty();
+    }
+
+    public void push(int i){
+
+        if (stack.isEmpty()){
+            Pair_Of_Ele_Height ele_height_pair = new Pair_Of_Ele_Height(i, i);
+            stack.add(ele_height_pair);
+        }else {
+            Pair_Of_Ele_Height ele_height_pair = this.peek();
+            Pair_Of_Ele_Height newPair = new Pair_Of_Ele_Height(i, i + ele_height_pair.getHeight());
+            stack.add(newPair);
+        }
+
+    }
+
+    public Pair_Of_Ele_Height pop(){
+        return stack.pop();
+    }
+
+    public Pair_Of_Ele_Height peek(){
+        return stack.peek();
+    }
+
+    public int getElement(){
+
+        if (stack.isEmpty()){
+            return 0;
+        }
+
+        Pair_Of_Ele_Height ele_height_pair = stack.peek();
+        return ele_height_pair.getEle();
+
+    }
+
+    public int getHeight(){
+
+        if (stack.isEmpty()){
+            return 0;
+        }
+
+        Pair_Of_Ele_Height ele_height_pair = stack.peek();
+        return ele_height_pair.getHeight();
+
+    }
+
+}
+
+class Pair_Of_Ele_Height{
+
+    public int ele;
+    public int height;
+
+    public Pair_Of_Ele_Height(int i, int j) {
+        this.ele = i;
+        this.height = j;
+    }
+
+    public int getEle() {
+        return ele;
+    }
+
+    public void setEle(int ele) {
+        this.ele = ele;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 
 }
