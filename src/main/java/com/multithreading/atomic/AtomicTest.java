@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class AtomicTest {
 
     private static AtomicInteger MY_INT = new AtomicInteger(0);
+    // private static Integer MY_INT = new Integer(0);
 
     public static void main(String[] args) {
 
@@ -33,7 +34,7 @@ public class AtomicTest {
 
             int local_value = MY_INT.intValue();
             while (MY_INT.intValue() <5){
-                System.out.println("Incrementing MY_INT to {0}" + local_value);
+                System.out.println("Incrementing MY_INT to " + local_value);
                 MY_INT.set(++local_value);
                 try {
                     Thread.sleep(500);

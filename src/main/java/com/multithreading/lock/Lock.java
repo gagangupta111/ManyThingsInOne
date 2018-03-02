@@ -23,7 +23,7 @@ public class Lock{
 
     }
 
-    public synchronized void unlock(){
+    public void unlock(){
 
         if(Thread.currentThread() == this.lockedBy){
 

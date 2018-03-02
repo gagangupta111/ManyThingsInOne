@@ -5,7 +5,6 @@ public class SerializeDemo {
 
     public static void main(String [] args) {
 
-        serializeDemo();
         deserializeDemo();
 
     }

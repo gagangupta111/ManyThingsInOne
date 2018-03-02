@@ -18,6 +18,15 @@ public class Test {
         box = new BoxDouble(12.12d, 13.13d, 14.14d);
         System.out.println(" Volume : " + box.volume());
 
+        int i = 5;
+        Object k = i;
+
+        k = 10;
+        int j = (int)k;
+
+        System.out.println("" + i + " " + j + " " + k);
+
+
     }
 
 }

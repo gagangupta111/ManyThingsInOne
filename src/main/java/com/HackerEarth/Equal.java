@@ -2,7 +2,9 @@ package com.HackerEarth;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Equal {
 
@@ -13,6 +15,9 @@ public class Equal {
         BufferedReader br  = new BufferedReader(new InputStreamReader(System.in));
         String line  = br.readLine();
         int testCases = Integer.parseInt(line);
+
+        List<Integer> list = new ArrayList<Integer>();
+
 
         int[] cases = new int[testCases];
         Integer[] students;

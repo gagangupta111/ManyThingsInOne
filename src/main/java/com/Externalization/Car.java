@@ -1,6 +1,5 @@
 package com.Externalization;
 
-
 import java.io.*;
 
 public class Car extends Automobile implements Externalizable {

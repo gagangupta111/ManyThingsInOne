@@ -14,7 +14,7 @@ public class LockExample {
 
         Lock lock = new Lock();
 
-        for (int i = 0; i < 100; i++){
+        for (int i = 0; i < 5; i++){
 
             OneThread oneThread = new OneThread(i + "", lock);
             executorService.submit(oneThread);
