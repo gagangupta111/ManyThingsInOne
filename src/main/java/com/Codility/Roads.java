@@ -85,7 +85,7 @@ class BinaryTree
         return -1;
     }
 
-    // Driver program to test the above functions
+    // Driver program to testAge the above functions
     public static void main(String args[])
     {
         BinaryTree tree = new BinaryTree();

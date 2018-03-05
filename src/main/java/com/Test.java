@@ -1,44 +1,68 @@
 package com;
 
+import java.util.*;
+
 public class Test
 {
-
-    public String getDescription(Object obj){ return obj.toString(); }
 
     public static void main(String args[])
     {
 
-        if ( ((Integer)22).equals((Integer)22 )){
-            System.out.println("Yes");
+        List<Integer> list = new ArrayList<>();
+        list.add(12);
+        list.add(13);
+        list.add(15);
+        list.add(188);
+
+        Map<String, String> map = new HashMap<>();
+        map.put("a", "a");
+        map.put("b", "b");
+        map.put("c", "bc");
+        map.put("d", "gd");
+
+        FinalTesting finalTesting = new FinalTesting(Collections.unmodifiableList(list), Collections.unmodifiableMap(map));
+
+        list.add(200);
+        map.put("e", "fgd");
+
+        for (Integer i : finalTesting.list){
+            System.out.println(" " + i);
         }
 
-        System.out.println((Integer) 222  );
-        System.out.println((Integer) 222  );
+        System.out.println();
 
-        double d = 0.1 * 111;
-        double e = 0.3;
+        Set<Map.Entry<String, String>> entries = finalTesting.map.entrySet();
+        for (Map.Entry<String, String> entry : entries){
 
-        if (d == e){
-            System.out.println("true");
+            System.out.println(entry.getKey() + " " + entry.getValue());
+
         }
 
-        System.out.println(d);
-        System.out.println(e);
-        BillPughSingleton billPughSingleton = BillPughSingleton.getInstance();
 
     }
 
 }
 
-class BillPughSingleton {
+final class FinalTesting{
 
-    private BillPughSingleton(){}
+    public final int integer;
+    public final List<Integer> list;
+    public final Map<String, String> map;
 
-    private static class SingletonHelper{
-        private static final BillPughSingleton INSTANCE = new BillPughSingleton();
+    public FinalTesting(List<Integer> list, Map<String, String> map) {
+        this.list = list;
+        this.map = map;
+        integer = 100;
     }
 
-    public static BillPughSingleton getInstance(){
-        return SingletonHelper.INSTANCE;
+    public int getInteger() {
+        return integer;
     }
+
+    public List<Integer> getList() {
+        return list;
+    }
+
 }
+
+
