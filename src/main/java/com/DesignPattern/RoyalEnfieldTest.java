@@ -8,12 +8,12 @@ public class RoyalEnfieldTest {
 
         RoyalEnfieldFactoryInterface chennaiFactory = API.installFactory("chennai");
         System.out.println(chennaiFactory.makeClassic());
-        System.out.println(chennaiFactory.makeThunderBord());
+        System.out.println(chennaiFactory.makeThunderBird());
 
         System.out.println();
         RoyalEnfieldFactoryInterface chandigarhFactory = API.installFactory("chandigarh");
         System.out.println(chandigarhFactory.makeClassic());
-        System.out.println(chandigarhFactory.makeThunderBord());
+        System.out.println(chandigarhFactory.makeThunderBird());
 
     }
 
@@ -25,15 +25,15 @@ abstract class API{
 
         EngineFactoryInterface  engineF     = new EngineFactory(city);
         BodyFactory             bodyF       = new BodyFactory(city);
-        RoyalEnfieldFactory chennaiFactory  = new RoyalEnfieldFactory(city, engineF, bodyF);
-        return chennaiFactory;
+        RoyalEnfieldFactory factory  = new RoyalEnfieldFactory(city, engineF, bodyF);
+        return factory;
     }
 
 }
 
 interface RoyalEnfieldFactoryInterface{
 
-    public RoyalEnfield makeThunderBord();
+    public RoyalEnfield makeThunderBird();
     public RoyalEnfield makeClassic();
 
 }
@@ -53,7 +53,7 @@ class RoyalEnfieldFactory implements RoyalEnfieldFactoryInterface{
 
     }
 
-    public RoyalEnfield makeThunderBord(){
+    public RoyalEnfield makeThunderBird(){
 
         return new RoyalEnfield(engineFactory.getEngine(EngineFactory.STANDARD_ENGIE),bodyFactory.getBody(BodyFactory.THUNDERBIRD_BODY), city);
 
