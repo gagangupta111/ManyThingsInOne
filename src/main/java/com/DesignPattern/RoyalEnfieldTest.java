@@ -6,21 +6,27 @@ public class RoyalEnfieldTest {
 
     public static void main(String[] args){
 
-        EngineFactory chennaiEngineF = new EngineFactory("Chennai Engine factory");
-        BodyFactory chennaiBodyF = new BodyFactory("Chennai Body factory");
-        RoyalEnfieldFactory chennaiFactory = new RoyalEnfieldFactory("Chennai factory", chennaiEngineF, chennaiBodyF);
-
+        RoyalEnfieldFactoryInterface chennaiFactory = API.installFactory("chennai");
         System.out.println(chennaiFactory.makeClassic());
         System.out.println(chennaiFactory.makeThunderBord());
 
         System.out.println();
-        EngineFactory chandigarhEngineF = new EngineFactory("Chandigarh Engine factory");
-        BodyFactory chandigarhBodyF = new BodyFactory("Chandigarh Body factory");
-        RoyalEnfieldFactory chandigarhFactory = new RoyalEnfieldFactory("Chandigarh factory", chandigarhEngineF, chandigarhBodyF);
-
+        RoyalEnfieldFactoryInterface chandigarhFactory = API.installFactory("chandigarh");
         System.out.println(chandigarhFactory.makeClassic());
         System.out.println(chandigarhFactory.makeThunderBord());
 
+    }
+
+}
+
+abstract class API{
+
+    public static RoyalEnfieldFactoryInterface installFactory(String city){
+
+        EngineFactoryInterface  engineF     = new EngineFactory(city);
+        BodyFactory             bodyF       = new BodyFactory(city);
+        RoyalEnfieldFactory chennaiFactory  = new RoyalEnfieldFactory(city, engineF, bodyF);
+        return chennaiFactory;
     }
 
 }
@@ -34,26 +40,28 @@ interface RoyalEnfieldFactoryInterface{
 
 class RoyalEnfieldFactory implements RoyalEnfieldFactoryInterface{
 
-    private EngineFactory engineFactory;
-    private BodyFactory bodyFactory;
-    private String name;
+    private EngineFactoryInterface engineFactory;
+    private BodyFactoryInterface bodyFactory;
+    private String city;
 
-    public RoyalEnfieldFactory(String name, EngineFactory engineFactory, BodyFactory bodyFactory) {
-        this.name = name;
+    public RoyalEnfieldFactory(String name, EngineFactoryInterface engineFactory, BodyFactoryInterface bodyFactory) {
+
+        this.city = name;
         this.engineFactory = engineFactory;
         this.bodyFactory = bodyFactory;
-        System.out.println( name + " Estalished ");
+        System.out.println( name + " RoyalEnfieldFactory Estalished ");
+
     }
 
     public RoyalEnfield makeThunderBord(){
 
-        return new RoyalEnfield(engineFactory.getEngine(EngineFactory.STANDARD_ENGIE),bodyFactory.getBody(BodyFactory.THUNDERBIRD_BODY) );
+        return new RoyalEnfield(engineFactory.getEngine(EngineFactory.STANDARD_ENGIE),bodyFactory.getBody(BodyFactory.THUNDERBIRD_BODY), city);
 
     }
 
     public RoyalEnfield makeClassic(){
 
-        return new RoyalEnfield(engineFactory.getEngine(EngineFactory.STANDARD_ENGIE),bodyFactory.getBody(BodyFactory.STANDARD_BODY) );
+        return new RoyalEnfield(engineFactory.getEngine(EngineFactory.STANDARD_ENGIE),bodyFactory.getBody(BodyFactory.STANDARD_BODY), city);
 
 
     }
@@ -78,13 +86,14 @@ class EngineFactory implements EngineFactoryInterface{
         this.name = name;
         map = new HashMap<>();
         map.put(EngineFactory.STANDARD_ENGIE, new Engine(EngineFactory.STANDARD_ENGIE, EngineFactory.ID) );
-        System.out.println( name + " Estalished ");
+        System.out.println( name + " EngineFactory Estalished ");
 
     }
 
     public Engine getEngine(String engineType){
 
-        return map.get(engineType);
+        Engine engine = map.get(engineType);
+        return new Engine(engine.getName(), engine.getId());
 
     }
 
@@ -113,12 +122,14 @@ class BodyFactory implements BodyFactoryInterface{
         this.map = new HashMap<>();
         map.put(BodyFactory.STANDARD_BODY, new Body(BodyFactory.STANDARD_BODY, BodyFactory.ID_STANDARD));
         map.put(BodyFactory.THUNDERBIRD_BODY, new Body(BodyFactory.THUNDERBIRD_BODY, BodyFactory.ID_THUNDERBIRD));
-        System.out.println( name + " Estalished ");
+        System.out.println( name + " BodyFactory Estalished ");
+
     }
 
     public Body getBody(String body){
 
-        return map.get(body);
+        Body body1 =  map.get(body);
+        return new Body(body1.getName(), body1.getId());
 
     }
 
@@ -128,6 +139,14 @@ class Engine{
 
     private String name;
     private int id;
+
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
 
     public Engine(String name, int id) {
 
@@ -139,7 +158,7 @@ class Engine{
     @Override
     public String toString() {
         return "Engine{" +
-                "name='" + name + '\'' +
+                "city='" + name + '\'' +
                 ", id=" + id +
                 '}';
     }
@@ -150,6 +169,14 @@ class Body{
     private String name;
     private int id;
 
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
     public Body(String name, int id) {
         this.name = name;
         this.id = id;
@@ -158,7 +185,7 @@ class Body{
     @Override
     public String toString() {
         return "Body{" +
-                "name='" + name + '\'' +
+                "city='" + name + '\'' +
                 ", id=" + id +
                 '}';
     }
@@ -168,10 +195,12 @@ class RoyalEnfield{
 
     private Engine engine;
     private Body body;
+    private String madeIn;
 
-    public RoyalEnfield(Engine engine, Body body) {
+    public RoyalEnfield(Engine engine, Body body, String madeIn) {
         this.engine = engine;
         this.body = body;
+        this.madeIn = madeIn;
     }
 
     @Override
@@ -179,6 +208,7 @@ class RoyalEnfield{
         return "RoyalEnfield{" +
                 "engine=" + engine +
                 ", body=" + body +
+                ", madeIn='" + madeIn + '\'' +
                 '}';
     }
 }
