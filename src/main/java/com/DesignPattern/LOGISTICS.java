@@ -2,7 +2,7 @@ package com.DesignPattern;
 
 import java.util.*;
 
-public class RIVIGOSystem {
+public class LOGISTICS {
 
     public static void main(String[] args){
 
