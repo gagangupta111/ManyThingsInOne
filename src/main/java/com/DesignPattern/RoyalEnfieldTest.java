@@ -9,11 +9,19 @@ public class RoyalEnfieldTest {
         RoyalEnfieldFactoryInterface chennaiFactory = API.installFactory("chennai");
         System.out.println(chennaiFactory.makeClassic());
         System.out.println(chennaiFactory.makeThunderBird());
+        System.out.println(chennaiFactory.makeElectra());
 
         System.out.println();
         RoyalEnfieldFactoryInterface chandigarhFactory = API.installFactory("chandigarh");
         System.out.println(chandigarhFactory.makeClassic());
         System.out.println(chandigarhFactory.makeThunderBird());
+        System.out.println(chandigarhFactory.makeElectra());
+
+        System.out.println();
+        RoyalEnfieldFactoryInterface karnalFactory = API.installFactory("karnal");
+        System.out.println(karnalFactory.makeClassic());
+        System.out.println(karnalFactory.makeThunderBird());
+        System.out.println(karnalFactory.makeElectra());
 
     }
 
@@ -35,6 +43,7 @@ interface RoyalEnfieldFactoryInterface{
 
     public RoyalEnfield makeThunderBird();
     public RoyalEnfield makeClassic();
+    public RoyalEnfield makeElectra();
 
 }
 
@@ -63,6 +72,13 @@ class RoyalEnfieldFactory implements RoyalEnfieldFactoryInterface{
 
         return new RoyalEnfield(engineFactory.getEngine(EngineFactory.STANDARD_ENGIE),bodyFactory.getBody(BodyFactory.STANDARD_BODY), city);
 
+
+    }
+
+    @Override
+    public RoyalEnfield makeElectra() {
+
+        return new RoyalEnfield(engineFactory.getEngine(EngineFactory.STANDARD_ENGIE),bodyFactory.getBody(BodyFactory.ELECTRA_BODY), city);
 
     }
 
@@ -109,9 +125,11 @@ class BodyFactory implements BodyFactoryInterface{
 
     public static final String STANDARD_BODY = "StandardBODY";
     public static final String THUNDERBIRD_BODY = "ThunderbirdBODY";
+    public static final String ELECTRA_BODY = "ELECTRA_BODY";
 
     public static final int ID_STANDARD = 100;
     public static final int ID_THUNDERBIRD = 200;
+    public static final int ID_ELECTRA = 300;
 
     private HashMap<String, Body> map;
     private String name;
@@ -122,6 +140,7 @@ class BodyFactory implements BodyFactoryInterface{
         this.map = new HashMap<>();
         map.put(BodyFactory.STANDARD_BODY, new Body(BodyFactory.STANDARD_BODY, BodyFactory.ID_STANDARD));
         map.put(BodyFactory.THUNDERBIRD_BODY, new Body(BodyFactory.THUNDERBIRD_BODY, BodyFactory.ID_THUNDERBIRD));
+        map.put(BodyFactory.ELECTRA_BODY, new Body(BodyFactory.ELECTRA_BODY, BodyFactory.ID_ELECTRA));
         System.out.println( name + " BodyFactory Estalished ");
 
     }
