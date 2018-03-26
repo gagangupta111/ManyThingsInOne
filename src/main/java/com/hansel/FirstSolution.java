@@ -4,14 +4,17 @@ import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.FileReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 class NodeMap{
 
     private String miniName;
-    private Map<String, ClassValue> map;
+    private Map<String, NodeMap> map;
 
-    public NodeMap(String miniName, Map<String, ClassValue> map) {
+    public NodeMap(String miniName, Map<String, NodeMap> map) {
         this.miniName = miniName;
         this.map = map;
     }
@@ -24,35 +27,35 @@ class NodeMap{
         this.miniName = miniName;
     }
 
-    public Map<String, ClassValue> getMap() {
+    public Map<String, NodeMap> getMap() {
         return map;
     }
 
-    public void setMap(Map<String, ClassValue> map) {
+    public void setMap(Map<String, NodeMap> map) {
         this.map = map;
     }
-}
 
+}
 
 public class FirstSolution {
 
-    private static final String FILENAME = "android.support.v4.text.LayoutManager -> android.support.v4.d.p:\n" +
+    private static Map<String, NodeMap> map = new HashMap<>();
+
+    private static final String FILENAME = "android.support.v4.text.LayoutManager -> android.support.v4.d.p\n" +
             "int getLayoutDirectionFromLocale() -> a\n" +
             "\tint getLayoutDirectionFromFirstChar() -> b\n" +
             "\tint getLayoutDirectionFromLocator() -> c\n" +
-            "android.support.v4.text.SupportManager -> android.support.v4.d.q:\n" +
+            "android.support.v4.text.SupportManager -> android.support.v4.d.q\n" +
             "\tint getSupportDirection() -> a\n" +
             "\tint getSupportLocation(int) -> b\n" +
             "\tint getName() -> c\n" +
-            "android.support.v7.block.Moderator -> android.support.v7.d.q:\n" +
+            "android.support.v7.block.Moderator -> android.support.v7.d.q\n" +
             "\tvoid showDialog() -> a\n" +
             "\tvoid showName() -> b\n" +
             "\tvoid showDialog(String) -> a\n" +
             "\tvoid showDialog() ->a:";
 
-    private static String inputString = "android.support.v4.text.LayoutManager.getLayoutDirectionFromLocale(Class1,Class2)\n" +
-            "android.support.v4.text.LayoutManager.getLayoutDirectionFromLocator()\n" +
-            "android.support.v7.block.Moderator.showDialog(String, String)\n";
+    private static String inputString = "android.support.v4.text.LayoutManager.getLayoutDirectionFromLocale()";
 
     public static void main(String[] args) {
 
@@ -60,24 +63,84 @@ public class FirstSolution {
         BufferedReader inputFile = null;
         BufferedReader string = null;
 
+        List<String> list = new ArrayList<>();
+
         try {
 
             inputFile = new BufferedReader(new InputStreamReader(new ByteArrayInputStream( FILENAME.getBytes() ) ) );
             string = new BufferedReader(new InputStreamReader(new ByteArrayInputStream( inputString.getBytes() ) ) );
             String sCurrentLine;
             String toBeMatched;
+            boolean flag = false;
 
             while ((toBeMatched = string.readLine()) != null) {
 
-                System.out.println("toBeMatched : " + toBeMatched);
+                flag = false;
+                int firstIndex = toBeMatched.indexOf("(");
+                int lastIndex = toBeMatched.indexOf(")");
 
-                while ((sCurrentLine = inputFile.readLine()) != null) {
-                    System.out.println(sCurrentLine);
+                if ( firstIndex == -1 || lastIndex == -1){
+                    System.out.println("Wrong input");
+                    return;
                 }
 
-                inputFile.reset();
+                String finalString = "";
+                String functionName = toBeMatched.substring(toBeMatched.lastIndexOf(".")+1, firstIndex-1);
+                String className = toBeMatched.substring(0, toBeMatched.lastIndexOf("."));
+
+                NodeMap nodeMap = map.get(className);
+
+                if ( nodeMap != null){
+
+                    finalString = finalString + nodeMap.getMiniName();
+                    Map<String, NodeMap> map = nodeMap.getMap();
+
+                    if (map.get(functionName) != null){
+                        finalString = finalString + "." + map.get(functionName);
+                        flag = true;
+                    }
+
+                }
+                if (flag == false){
+
+                    finalString = "";
+                    NodeMap classNodeMap = null;
+                    Map<String, NodeMap> functionNodeMap = new HashMap<>();
+
+                    while ((sCurrentLine = inputFile.readLine()) != null) {
+
+                        if (sCurrentLine.contains(className)){
+
+                            String miniClassName = sCurrentLine.substring(sCurrentLine.lastIndexOf(" "), sCurrentLine.length()-1);
+                            finalString = finalString + miniClassName;
+
+                            while ((sCurrentLine = inputFile.readLine()) != null && sCurrentLine.contains("(")) {
+
+                                if (sCurrentLine.contains(functionName)){
+
+                                    String miniFunctionName = sCurrentLine.substring(sCurrentLine.lastIndexOf(" "), sCurrentLine.length());
+                                    finalString = finalString + miniFunctionName;
+                                    functionNodeMap.put(functionName, new NodeMap(miniFunctionName, null));
+                                    break;
+
+                                }
+
+                            }
+
+                            classNodeMap = new NodeMap(miniClassName, functionNodeMap);
+                            map.put(className, classNodeMap);
+                            break;
+
+                        }
+
+                    }
+
+                }
+
+                list.add(finalString);
 
             }
+
         } catch (Exception e) {
 
             e.printStackTrace();
@@ -97,6 +160,12 @@ public class FirstSolution {
                 ex.printStackTrace();
 
             }
+
+        }
+
+        for (String str : list){
+
+            System.out.println(str);
 
         }
 
