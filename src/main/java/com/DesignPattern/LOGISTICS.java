@@ -213,11 +213,13 @@ class Truck implements Vehicle{
 
     @Override
     public int hashCode() {
+
         int result = id;
         result = 31 * result + number.hashCode();
         result = 31 * result + (driver != null ? driver.hashCode() : 0);
         result = 31 * result + city.hashCode();
         return result;
+
     }
 
     @Override

@@ -1,12 +1,56 @@
 package com;
 
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Test
 {
 
+    public static void swap(FinalTesting one, FinalTesting two){
+
+        System.out.println(one);
+        System.out.println(two);
+        System.out.println();
+
+        FinalTesting temp = one;
+        one = two;
+        two = temp;
+
+        System.out.println(one);
+        System.out.println(two);
+        System.out.println();
+
+    }
+
     public static void main(String args[])
     {
+
+        List<String> myList =
+                Arrays.asList("a1", "a2", "b1", "c2", "c1");
+
+        myList
+                .stream()
+                .filter(s -> s.startsWith("c"))
+                .map(String::toUpperCase)
+                .sorted()
+                .forEach(System.out::println);
+
+
+
+        FinalTesting one = new FinalTesting(null, null);
+        FinalTesting two = new FinalTesting(null, null);
+        one.integer = 100;
+        two.integer = 200;
+
+        System.out.println(one);
+        System.out.println(two);
+        System.out.println();
+
+        swap(one, two);
+
+        System.out.println(one);
+        System.out.println(two);
+        System.out.println();
 
         List<Integer> list = new ArrayList<>();
         list.add(12);
@@ -38,6 +82,11 @@ public class Test
 
         }
 
+        System.out.println();
+        AtomicInteger atomicInteger = new AtomicInteger(100);
+        System.out.println(atomicInteger.getAndIncrement());
+
+        System.out.println(atomicInteger.getAndIncrement());
 
     }
 
@@ -45,7 +94,7 @@ public class Test
 
 final class FinalTesting{
 
-    public final int integer;
+    public int integer;
     public final List<Integer> list;
     public final Map<String, String> map;
 
@@ -63,6 +112,14 @@ final class FinalTesting{
         return list;
     }
 
+    @Override
+    public String toString() {
+        return "FinalTesting{" +
+                "integer=" + integer +
+                ", list=" + list +
+                ", map=" + map +
+                '}';
+    }
 }
 
 

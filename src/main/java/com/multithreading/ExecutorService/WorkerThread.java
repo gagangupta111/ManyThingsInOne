@@ -1,6 +1,10 @@
 package com.multithreading.ExecutorService;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class WorkerThread implements Runnable {
+
+    private AtomicInteger atomicInteger = new AtomicInteger(100);
 
     private String command;
 
