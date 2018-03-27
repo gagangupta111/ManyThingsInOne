@@ -57,6 +57,30 @@ public class FirstSolution {
 
     private static String inputString = "android.support.v4.text.LayoutManager.getLayoutDirectionFromLocale()";
 
+    private static String findFunctionName(String inputString){
+
+        return inputString.substring(inputString.lastIndexOf(".")+1, inputString.indexOf("("));
+
+    }
+
+    private static String findClassName(String inputString){
+
+        return inputString.substring(inputString.lastIndexOf(".")+1, inputString.indexOf("("));
+
+    }
+
+    private static String findMiniClassName(String inputString){
+
+        return inputString.substring(inputString.lastIndexOf(".")+1, inputString.indexOf("("));
+
+    }
+
+    private static String findMiniFunctionName(String inputString){
+
+        return inputString.substring(inputString.lastIndexOf(" "), inputString.length());
+
+    }
+
     public static void main(String[] args) {
 
         FileReader fr = null;
@@ -85,18 +109,18 @@ public class FirstSolution {
                 }
 
                 String finalString = "";
-                String functionName = toBeMatched.substring(toBeMatched.lastIndexOf(".")+1, firstIndex-1);
-                String className = toBeMatched.substring(0, toBeMatched.lastIndexOf("."));
+                String toBeMatchedfunctionName = findFunctionName(toBeMatched);
+                String toBeMatchedClassName = findMiniFunctionName(toBeMatched);
 
-                NodeMap nodeMap = map.get(className);
+                NodeMap nodeMap = map.get(toBeMatchedClassName);
 
                 if ( nodeMap != null){
 
                     finalString = finalString + nodeMap.getMiniName();
                     Map<String, NodeMap> map = nodeMap.getMap();
 
-                    if (map.get(functionName) != null){
-                        finalString = finalString + "." + map.get(functionName);
+                    if (map.get(toBeMatchedfunctionName) != null){
+                        finalString = finalString + "." + map.get(toBeMatchedfunctionName);
                         flag = true;
                     }
 
@@ -109,26 +133,25 @@ public class FirstSolution {
 
                     while ((sCurrentLine = inputFile.readLine()) != null) {
 
-                        if (sCurrentLine.contains(className)){
+                        if (sCurrentLine.contains(toBeMatchedClassName)){
 
                             String miniClassName = sCurrentLine.substring(sCurrentLine.lastIndexOf(" "), sCurrentLine.length()-1);
                             finalString = finalString + miniClassName;
 
                             while ((sCurrentLine = inputFile.readLine()) != null && sCurrentLine.contains("(")) {
 
-                                if (sCurrentLine.contains(functionName)){
+                                String newFunctionName = findFunctionName(sCurrentLine);
+                                String miniFunctionName = findMiniFunctionName(sCurrentLine);
+                                functionNodeMap.put(newFunctionName, new NodeMap(miniFunctionName, null));
 
-                                    String miniFunctionName = sCurrentLine.substring(sCurrentLine.lastIndexOf(" "), sCurrentLine.length());
+                                if (sCurrentLine.contains(toBeMatchedfunctionName)){
                                     finalString = finalString + miniFunctionName;
-                                    functionNodeMap.put(functionName, new NodeMap(miniFunctionName, null));
-                                    break;
-
                                 }
 
                             }
 
                             classNodeMap = new NodeMap(miniClassName, functionNodeMap);
-                            map.put(className, classNodeMap);
+                            map.put(toBeMatchedClassName, classNodeMap);
                             break;
 
                         }
