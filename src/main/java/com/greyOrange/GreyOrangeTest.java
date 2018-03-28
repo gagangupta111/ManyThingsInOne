@@ -12,7 +12,7 @@ public class GreyOrangeTest {
 
     public static void main(String[] args) throws IOException {
 
-        System.out.println(" " + countOfSequences("1", "1"));
+        System.out.println(" " + countOfSequences("7", "5"));
 
     }
 
