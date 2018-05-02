@@ -12,6 +12,9 @@ public class Test
         System.out.println(two);
         System.out.println();
 
+        int[] arr = {1,2};
+        int s = arr.length;
+
         FinalTesting temp = one;
         one = two;
         two = temp;
@@ -20,74 +23,112 @@ public class Test
         System.out.println(two);
         System.out.println();
 
+        System.out.println("Print" + kangaroo(0,2,5,3));
+
+    }
+
+    static int migratoryBirds(int n, int[] ar) {
+
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int i  = 0; i < n; i++){
+
+            Integer value = map.get(ar[i]);
+            if (value == null){
+                map.put(ar[i], 1);
+            }else {
+                map.put(ar[i], value+1);
+            }
+
+        }
+
+        int key = -1;
+        int value = -1;
+
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()){
+
+            if (entry.getValue().intValue() > value){
+
+                value = entry.getValue().intValue();
+                key = entry.getKey().intValue();
+
+            }
+        }
+
+        return key;
+
+    }
+
+    static String kangaroo(int x1, int v1, int x2, int v2) {
+
+        int distance = Integer.MAX_VALUE;
+        int newDistance = Math.abs(x1 - x2);
+
+        while ( newDistance < distance ){
+
+            if (newDistance == 0){
+                return "YES";
+            }
+
+            distance = newDistance;
+            newDistance = Math.abs((x1 = x1 + v1) - (x2 = x2 + v2));
+
+        }
+
+        return "NO";
+
+    }
+
+
+    static int countDuplicates(int[] numbers) {
+        /*
+         * Write your code here.
+         */
+
+        Map<Integer, Integer> map  = new HashMap<>();
+
+
+        for (int i : numbers){
+            if (map.get(i) == null){
+                map.put(i, 1);
+            }else {
+                map.put(i, map.get(i) + 1);
+            }
+        }
+
+        int count = 0;
+
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()){
+
+            if (entry.getValue() > 1){
+                count++;
+            }
+
+        }
+
+        return count;
+
     }
 
     public static void main(String args[])
     {
 
-        List<String> myList =
-                Arrays.asList("a1", "a2", "b1", "c2", "c1");
+        System.out.println(getTrailing0InFactorial(29));
 
-        myList
-                .stream()
-                .filter(s -> s.startsWith("c"))
-                .map(String::toUpperCase)
-                .sorted()
-                .forEach(System.out::println);
-
-
-
-        FinalTesting one = new FinalTesting(null, null);
-        FinalTesting two = new FinalTesting(null, null);
-        one.integer = 100;
-        two.integer = 200;
-
-        System.out.println(one);
-        System.out.println(two);
-        System.out.println();
-
-        swap(one, two);
-
-        System.out.println(one);
-        System.out.println(two);
-        System.out.println();
-
-        List<Integer> list = new ArrayList<>();
-        list.add(12);
-        list.add(13);
-        list.add(15);
-        list.add(188);
-
-        Map<String, String> map = new HashMap<>();
-        map.put("a", "a");
-        map.put("b", "b");
-        map.put("c", "bc");
-        map.put("d", "gd");
-
-        FinalTesting finalTesting = new FinalTesting(Collections.unmodifiableList(list), Collections.unmodifiableMap(map));
-
-        list.add(200);
-        map.put("e", "fgd");
-
-        for (Integer i : finalTesting.list){
-            System.out.println(" " + i);
+        if ( Math.abs(5-1) > Math.abs(4-3) ){
+            System.out.println();
         }
 
-        System.out.println();
+    }
 
-        Set<Map.Entry<String, String>> entries = finalTesting.map.entrySet();
-        for (Map.Entry<String, String> entry : entries){
+    public static int getTrailing0InFactorial(int num) {
+        if(num<0)
+            return -1;
 
-            System.out.println(entry.getKey() + " " + entry.getValue());
-
+        int count = 0;
+        for (int i = 5; (num/i) > 0; i=i*5) {
+            count = count + num/i;
         }
-
-        System.out.println();
-        AtomicInteger atomicInteger = new AtomicInteger(100);
-        System.out.println(atomicInteger.getAndIncrement());
-
-        System.out.println(atomicInteger.getAndIncrement());
-
+        return count;
     }
 
 }
