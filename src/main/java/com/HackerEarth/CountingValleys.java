@@ -9,8 +9,6 @@ public class CountingValleys {
         System.out.println(" Hello! ");
         System.out.println(countingValleys(8, "UDDDUDUU"));
 
-
-
     }
 
     static int countingValleys(int n, String s) {
