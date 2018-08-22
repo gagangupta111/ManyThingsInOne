@@ -1,166 +1,94 @@
 package com;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import jdk.nashorn.internal.parser.JSONParser;
+import org.json.JSONObject;
+import org.json.JSONString;
+import org.json.JSONWriter;
+
+import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Test
-{
+public class Test {
 
-    public static void swap(FinalTesting one, FinalTesting two){
+    public static void main(String args[]) throws IOException {
 
-        System.out.println(one);
-        System.out.println(two);
-        System.out.println();
+        ObjectMapper mapper = new ObjectMapper();
 
-        int[] arr = {1,2};
-        int s = arr.length;
+        VCSSyncPreconditionsDTOMap vcsSyncPreconditionsDTOMap = new VCSSyncPreconditionsDTOMap();
+        vcsSyncPreconditionsDTOMap.messageCode = "messageCode";
 
-        FinalTesting temp = one;
-        one = two;
-        two = temp;
+        List<CheckedOutFile> checkedOutFiles = new ArrayList<>();
+        CheckedOutFile file  = new CheckedOutFile();
+        file.id = 10;
+        file.name = "name";
+        file.path = "path";
+        file.userName = "username";
+        checkedOutFiles.add(file);
 
-        System.out.println(one);
-        System.out.println(two);
-        System.out.println();
+        file  = new CheckedOutFile();
+        file.id = 11;
+        file.name = "name1";
+        file.path = "path1";
+        file.userName = "username1";
+        checkedOutFiles.add(file);
 
-        System.out.println("Print" + kangaroo(0,2,5,3));
+        vcsSyncPreconditionsDTOMap.messageData = new HashMap<>();
+        vcsSyncPreconditionsDTOMap.messageData.put("oldHost", "oldHost");
+        vcsSyncPreconditionsDTOMap.messageData.put("oldRepo", "oldRepo");
+        vcsSyncPreconditionsDTOMap.messageData.put("checkedOutFiles", checkedOutFiles);
 
-    }
+        String json  = mapper.writeValueAsString(vcsSyncPreconditionsDTOMap);
+        System.out.println("json" + json);
 
-    static int migratoryBirds(int n, int[] ar) {
+        VCSSyncPreconditionsDTONoMap noMapFromJson = mapper.readValue(json, VCSSyncPreconditionsDTONoMap.class);
+        System.out.println("noMapFromJson" + mapper.writeValueAsString(vcsSyncPreconditionsDTOMap));
 
-        Map<Integer, Integer> map = new HashMap<>();
-        for(int i  = 0; i < n; i++){
+        VCSSyncPreconditionsDTONoMap noMap = new VCSSyncPreconditionsDTONoMap();
+        noMap.messageCode = "messageCode";
 
-            Integer value = map.get(ar[i]);
-            if (value == null){
-                map.put(ar[i], 1);
-            }else {
-                map.put(ar[i], value+1);
-            }
+        noMap.messageData = new MessageData();
+        noMap.messageData.oldHost = "oldHost";
+        noMap.messageData.oldRepo = "oldHost";
+        noMap.messageData.checkedOutFiles = checkedOutFiles;
 
-        }
+        System.out.println( "noMap"  + mapper.writeValueAsString(noMap) );
 
-        int key = -1;
-        int value = -1;
-
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()){
-
-            if (entry.getValue().intValue() > value){
-
-                value = entry.getValue().intValue();
-                key = entry.getKey().intValue();
-
-            }
-        }
-
-        return key;
-
-    }
-
-    static String kangaroo(int x1, int v1, int x2, int v2) {
-
-        int distance = Integer.MAX_VALUE;
-        int newDistance = Math.abs(x1 - x2);
-
-        while ( newDistance < distance ){
-
-            if (newDistance == 0){
-                return "YES";
-            }
-
-            distance = newDistance;
-            newDistance = Math.abs((x1 = x1 + v1) - (x2 = x2 + v2));
-
-        }
-
-        return "NO";
-
-    }
-
-
-    static int countDuplicates(int[] numbers) {
-        /*
-         * Write your code here.
-         */
-
-        Map<Integer, Integer> map  = new HashMap<>();
-
-
-        for (int i : numbers){
-            if (map.get(i) == null){
-                map.put(i, 1);
-            }else {
-                map.put(i, map.get(i) + 1);
-            }
-        }
-
-        int count = 0;
-
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()){
-
-            if (entry.getValue() > 1){
-                count++;
-            }
-
-        }
-
-        return count;
-
-    }
-
-    public static void main(String args[])
-    {
-
-        System.out.println(getTrailing0InFactorial(29));
-
-        if ( Math.abs(5-1) > Math.abs(4-3) ){
-            System.out.println();
-        }
-
-    }
-
-    public static int getTrailing0InFactorial(int num) {
-        if(num<0)
-            return -1;
-
-        int count = 0;
-        for (int i = 5; (num/i) > 0; i=i*5) {
-            count = count + num/i;
-        }
-        return count;
     }
 
 }
 
-final class FinalTesting{
 
-    public int integer;
-    public final List<Integer> list;
-    public final Map<String, String> map;
-
-    public FinalTesting(List<Integer> list, Map<String, String> map) {
-        this.list = list;
-        this.map = map;
-        integer = 100;
-    }
-
-    public int getInteger() {
-        return integer;
-    }
-
-    public List<Integer> getList() {
-        return list;
-    }
-
-    @Override
-    public String toString() {
-        return "FinalTesting{" +
-                "integer=" + integer +
-                ", list=" + list +
-                ", map=" + map +
-                '}';
-    }
+class CheckedOutFile {
+    public long id;
+    public String name;
+    public String path;
+    public String userName;
 }
 
 
+class MessageData {
+
+    public String oldHost;
+    public String oldRepo;
+    public List<CheckedOutFile> checkedOutFiles;
+
+}
+
+
+class VCSSyncPreconditionsDTONoMap {
+
+    public String messageCode;
+    public MessageData messageData;
+
+}
+
+
+class VCSSyncPreconditionsDTOMap {
+
+    public String messageCode;
+    public Map<Object, Object> messageData;
+
+}

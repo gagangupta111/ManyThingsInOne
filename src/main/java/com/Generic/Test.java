@@ -33,13 +33,13 @@ public class Test {
 
         System.out.println("" + i + " " + j + " " + k);
 
-        List<B2> list = new ArrayList<>();
+        List<C2> list = new ArrayList<>();
 
         check(list);
 
     }
 
-    public static void check(List<? super C2> list ){
+    public static void check(List<? extends C2> list ){
 
         System.out.println();
 
