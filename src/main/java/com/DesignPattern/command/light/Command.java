@@ -2,6 +2,6 @@ package com.DesignPattern.command.light;
 
 public interface Command {
 
-    public void pressButton();
+    public void execute(Light light);
 
 }

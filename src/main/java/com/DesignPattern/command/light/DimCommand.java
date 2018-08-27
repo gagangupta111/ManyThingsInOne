@@ -1,9 +1,9 @@
 package com.DesignPattern.command.light;
 
-public class OffCommand implements Command{
+public class DimCommand implements Command{
 
     @Override
     public void execute(Light light) {
-        light.lightOff();
+        light.lightDimm();
     }
 }

@@ -14,4 +14,9 @@ public class Light {
         System.out.println("Light is off!");
     }
 
+    public void lightDimm(){
+        on = false;
+        System.out.println("Light is Dimm!");
+    }
+
 }

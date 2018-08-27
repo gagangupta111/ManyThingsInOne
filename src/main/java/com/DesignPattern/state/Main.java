@@ -10,7 +10,8 @@ public class Main {
         light.pressButton();    // 2
         light.pressButton();    // 3
         light.pressButton();    // 4
-
+        light.pressButton();
+        
     }
 
 }

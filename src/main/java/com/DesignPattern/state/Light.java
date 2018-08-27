@@ -18,7 +18,7 @@ public class Light {
 
     public void pressButton(){
 
-        state.pressButton(this);
+        state.change(this);
 
     }
 

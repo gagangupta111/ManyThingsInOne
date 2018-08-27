@@ -1,24 +1,780 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dec0f711-365f-4412-99ec-079b6f68ca07" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Light.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Mai.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/OffCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/OnCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/RemoteControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Light.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OffState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OnState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/State.java" afterDir="false" />
+    <list default="true" id="dec0f711-365f-4412-99ec-079b6f68ca07" name="Default" comment="Command and Design Pattern testing with new commands and new states.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/DimCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/DimState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/GaganGupta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/GaganGupta1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/CountingValleys.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/HackerEarth/CountingValleys.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/hansel/FirstSolution.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/hansel/FirstSolution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/API.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Agency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Agency1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/BodyFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/BodyFactoryInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Bridge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/ChainOfResponsibility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Dice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Driver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/DrivesInProgress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/DrivesInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Driving_Agency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Driving_Agency_Interface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Engine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/EngineFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/EngineFactoryInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Flat$BHK.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Flat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/GamePlay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/HumanDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/LOGISTICS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/LOGISTICS_API.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/LOGISTICS_API_IMPL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/LUDO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Lamp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/LampA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/LampB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/LogAll.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Logger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/LudoBoard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/MultiplyStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Observer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/ObserverInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/ObserverPublisher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Piece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Publisher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/PublisherInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/RentalAgency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/RentalDealer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Request.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/RoyalEnfield.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/RoyalEnfieldFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/RoyalEnfieldFactoryInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/RoyalEnfieldTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/SnakeAndLadder/Dice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/SnakeAndLadder/GamePlay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/SnakeAndLadder/Ladder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/SnakeAndLadder/Piece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/SnakeAndLadder/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/SnakeAndLadder/Snake.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/SnakeAndLadder/SnakeAndLadder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/SnakeAndLadder/SnakeLadder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/SnakeAndLadder/Spot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Spot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Strategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/StrategyInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/StrategyOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/SumStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Switch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/SwitchA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/SwitchB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/ThreadPool/ReusableClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/ThreadPool/ReusableInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/ThreadPool/ReusablePool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/ThreadPool/ReusablePoolInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/ThreadPool/ThreadPoolMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Truck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/command/AdditionCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/command/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/command/CommandDesign.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/command/MultiplyCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/command/SubtractionCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/command/WorkItOut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/command/WorkItOutDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/decorator/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/decorator/AwithX.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/decorator/BorderShape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/decorator/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/decorator/Decorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/decorator/DecoratorAbstractClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/decorator/DecoratorDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/decorator/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/decorator/RedShape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/DesignPattern/decorator/Shape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Exceptions/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Exceptions/B.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Exceptions/SortByName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Exceptions/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Externalization/Automobile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Externalization/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Externalization/ExternExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/FinalTesting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/A1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/A2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/A3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/A4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/B1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/B2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/B3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/B4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/Box.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/BoxDouble.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/BoxFloat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/BoxInt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/C1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/C2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/C3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/D1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/D2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/E1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/E2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/E3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/E4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/GenericMethodTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/GenericsType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Generic/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/ACMIPCCTeam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/AlgorithmicCrush.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Array2DSHourGlass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/ArrayAndSimpleQueries.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/ArraysDS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/BalancedBrackets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/BeautifulString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/CaesarCipher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/CamelCase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/CharacterStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Codility/BinaryTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Codility/CarParking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Codility/LeastTicketPrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Codility/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Codility/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/CountingValleys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/CupCakes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Divisible.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Ele_Height_Pair.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/ElectronicsShop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Equal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/EqualStacks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/ExcelLine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/ExpandChemistryFormula.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Fibo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/FindDigits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/FindIndex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/FunnyString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/GaganGupta.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/GameOfTwoStacks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/GemStones.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/GraphClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/GreedyFlorist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/H_Stack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/HackerLandRadioTransmitters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/HackerRankString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/HashCodeCheck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/IceCreamParlour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/IntPair.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/IsSorted.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/JimAndOrders.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Kangaroo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/KaprekarModified.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/KittysCalculationsOnATree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/LeastDiff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/LuckBalance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/MakingAnagrams.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/MarkAndToys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Mars.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/MaxMin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/MaxSubArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/MaximumElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Meeting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/MeetingScheduler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/MinimumMoves.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/MissingNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/MyStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/NonDegenerateTriangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Pair_Of_Ele_Height.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Pair_Of_Int_String.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Palindrome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/PickingNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/PriyankaAndToys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/ProgrammerString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/RichieRich.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/RoadsAndLibraries.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/SaveMoney.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/SearchTheWord.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/SeparateTheNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Sherlock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/SherlockAndArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/SherlockValidString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/SimpleTextEditor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/SparseArrays.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Stack_Of_Height.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/StringConstruction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/SuperReducedString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/SwapNodesAlgo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/SwapPermutation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/TestClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/TestCount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/ThePowerSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/TimeConversion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/TimeSlot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/TwoCharacters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/TwoIntegers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/TwoStrings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/Waiter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/bComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/chess/Bishop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/chess/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/chess/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/chess/Horse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/chess/King.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/chess/Pawn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/chess/Piece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/chess/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/chess/Queen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/chess/Rook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/chess/Spot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/chess/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerEarth/ijPair.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/HackerRank/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Ideone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/InnerClass/CheckPerson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/InnerClass/CheckPersonEligibleForSelectiveService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/InnerClass/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/InnerClass/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Interval.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/IntervalComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Java8Latest/ForEach$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Java8Latest/ForEach.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Java8Latest/MyConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/JavaBreaks/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/LRU/Cache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/LRU/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/LRU/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Lexicographic_Permutation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Practice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/ProducerConsumer/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/ProducerConsumer/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/ProducerConsumer/ProducerConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Serialization/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Serialization/SerializeDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Snapwiz/SnapwizRepeatedCharacters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Snapwiz/SnapwizStringRepitition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Snapwiz/StringInteger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/StreamExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/cache/LRU.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/cache/LRUCache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/cache/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/convertToJSON/Sample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/LinkedList/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/LinkedList/ReverseList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/Map/Custom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/Map/HashMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/Map/Key.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/Tree/BTreePrinter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/Tree/BTreePrinterTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/Tree/BinaryTreeToBST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/Tree/LeftViewPrint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/Tree/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/Tree/TreeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/Trie/Trie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/Trie/TrieNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/Trie/TrieTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/graph/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/graph/Graph1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/graph/GraphTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/graph/ShortestPathGraphArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/graph/one/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/graph/one/IntegerNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/dataStructures/graph/one/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/generics/Class1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/generics/Class2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/generics/ComparatorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/generics/DifferentObjectsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/generics/Empl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/generics/GenericMethodTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/generics/MySalaryComp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/generics/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/go_jek/AvailableSlots.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/go_jek/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/go_jek/CarParkingLot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/go_jek/Go_jeck_demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/go_jek/Slot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/go_jek/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/greyOrange/GreyOrangeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/hansel/FirstSolution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/hansel/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/hansel/NodeMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/hansel/SecondSolution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/hansel/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/interviewbit/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/interviewbit/LongestArithmeticProgression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/AbstractInterfaceRunnable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/AlternateNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/AlternateNumberPassing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ConcurrentHashMap/ConcurrentHashMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ConcurrentHashMap/Key.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ConcurrentHashMap/MapDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ConcurrentHashMap/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/EagerInitializedSingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ExecutorService/MyCallable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ExecutorService/RejectedExecutionHandlerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ExecutorService/ThreadPoolExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ExecutorService/WorkerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/MyCallable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/Number.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/Print.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/PrintAB/PrintABClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/PrintAB/PrintABDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/PrintAB/PrintResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/Printer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ProducerConsumer/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ProducerConsumer/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ProducerConsumer/ProducerConsumerWaitNotify.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ProducerConsumer/onemore/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ProducerConsumer/onemore/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ProducerConsumer/onemore/Queue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ProducerConsumer/onemore/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/RejectedExecutionHandlerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/SharingThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/SimpleThreadPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/Singleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/TestWorkerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/ThreadedSend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/VolatileTest$ChangeListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/VolatileTest$ChangeMaker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/VolatileTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/WorkerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/atomic/AtomicTest$ChangeListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/atomic/AtomicTest$ChangeMaker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/atomic/AtomicTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/atomic/AtomicTestBoolean$ChangeListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/atomic/AtomicTestBoolean$ChangeMaker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/atomic/AtomicTestBoolean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/barrier/Barrier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/barrier/BarrierDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/barrier/Train.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/get.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/getSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/getSetImplemented.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/latch/CountDownLatchDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/latch/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/lock/Lock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/lock/LockExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/lock/OneThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/printClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/set.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/threadpool/QueueOfTasks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/threadpool/ThreadPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/multithreading/threadpool/WorkerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/stream/Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/test/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/test/B.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/test/C.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/test/Immutable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/test/Implemented.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/test/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/threadpool/Queue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/threadpool/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/threadpool/ThreadPoolExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/com/threadpool/WorkerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Light.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Light.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Mai.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Mai.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/OffCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/OffCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/OnCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/OnCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/RemoteControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/RemoteControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Light.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Light.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OffState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OffState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OnState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OnState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CheckedOutFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/API.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Agency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Agency1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/BodyFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/BodyFactoryInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Bridge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Dice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Driver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/DrivesInProgress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/DrivesInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Driving_Agency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Driving_Agency_Interface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Engine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/EngineFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/EngineFactoryInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Flat$BHK.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Flat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/GamePlay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/HumanDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/LOGISTICS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/LOGISTICS_API.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/LOGISTICS_API_IMPL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/LUDO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Lamp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/LampA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/LampB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/LudoBoard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/MultiplyStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Observer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/ObserverInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/ObserverPublisher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Piece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Publisher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/PublisherInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/RentalAgency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/RentalDealer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/RoyalEnfield.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/RoyalEnfieldFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/RoyalEnfieldFactoryInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/RoyalEnfieldTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/SnakeAndLadder/Dice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/SnakeAndLadder/GamePlay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/SnakeAndLadder/Ladder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/SnakeAndLadder/Piece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/SnakeAndLadder/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/SnakeAndLadder/Snake.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/SnakeAndLadder/SnakeAndLadder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/SnakeAndLadder/SnakeLadder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/SnakeAndLadder/Spot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Spot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Strategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/StrategyInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/StrategyOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/SumStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Switch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/SwitchA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/SwitchB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/ThreadPool/ReusableClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/ThreadPool/ReusableInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/ThreadPool/ReusablePool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/ThreadPool/ReusablePoolInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/ThreadPool/ThreadPoolMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Truck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/chainOfResponsibility/ChainOfResponsibility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/chainOfResponsibility/LogAll.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/chainOfResponsibility/Logger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/chainOfResponsibility/Request.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/chainOfResponsibility/atm/Atm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/chainOfResponsibility/atm/Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/chainOfResponsibility/atm/MoneyNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/chainOfResponsibility/atm/Note.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/chainOfResponsibility/atm/NotePile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/chainOfResponsibility/atm/Request.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/chainOfResponsibility/atm/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/AdditionCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/CommandDesign.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/MultiplyCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/SubtractionCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/WorkItOut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/WorkItOutDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/light/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/light/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/light/Light.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/light/Light.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/light/Mai.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/light/Mai.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/light/OffCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/light/OffCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/light/OnCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/light/OnCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/light/RemoteControl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/DesignPattern/command/light/RemoteControl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/decorator/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/decorator/AwithX.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/decorator/BorderShape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/decorator/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/decorator/Decorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/decorator/DecoratorAbstractClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/decorator/DecoratorDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/decorator/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/decorator/RedShape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/decorator/Shape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/state/Light.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/DesignPattern/state/Light.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/state/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/DesignPattern/state/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/state/OffState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/DesignPattern/state/OffState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/state/OnState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/DesignPattern/state/OnState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/DesignPattern/state/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/DesignPattern/state/State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Exceptions/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Exceptions/B.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Exceptions/SortByName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Exceptions/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Externalization/Automobile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Externalization/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Externalization/ExternExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/A1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/A2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/A3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/A4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/B1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/B2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/B3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/B4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/Box.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/BoxDouble.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/BoxFloat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/BoxInt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/C1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/C2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/C3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/D1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/D2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/E1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/E2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/E3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/E4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/GenericMethodTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/GenericsType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Generic/examples/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/ACMIPCCTeam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/AlgorithmicCrush.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Array2DSHourGlass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/ArrayAndSimpleQueries.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/ArraysDS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/BalancedBrackets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/BeautifulString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/CaesarCipher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/CamelCase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/CharacterStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Codility/BinaryTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Codility/CarParking.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Codility/LeastTicketPrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Codility/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Codility/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/CountingValleys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/CupCakes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Divisible.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Ele_Height_Pair.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Equal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/EqualStacks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/ExcelLine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/ExpandChemistryFormula.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Fibo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/FindDigits.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/FindIndex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/FunnyString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/GaganGupta.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/GameOfTwoStacks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/GemStones.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/GraphClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/GreedyFlorist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/H_Stack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/HackerLandRadioTransmitters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/HackerRankString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/HashCodeCheck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/IceCreamParlour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/IntPair.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/IsSorted.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/JimAndOrders.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Kangaroo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/KaprekarModified.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/KittysCalculationsOnATree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/LeastDiff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/LuckBalance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/MakingAnagrams.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/MarkAndToys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Mars.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/MaxMin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/MaxSubArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/MaximumElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Meeting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/MeetingScheduler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/MinimumMoves.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/MissingNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/MyStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/NonDegenerateTriangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Pair_Of_Ele_Height.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Pair_Of_Int_String.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Palindrome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/PriyankaAndToys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/ProgrammerString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/RichieRich.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/RoadsAndLibraries.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/SaveMoney.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/SearchTheWord.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/SeparateTheNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Sherlock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/SherlockAndArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/SherlockValidString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/SimpleTextEditor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/SparseArrays.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Stack_Of_Height.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/StringConstruction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/SuperReducedString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/SwapNodesAlgo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/SwapPermutation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/TestClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/TestCount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/ThePowerSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/TimeConversion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/TimeSlot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/TwoCharacters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/TwoIntegers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/TwoStrings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/Waiter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/bComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/chess/Bishop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/chess/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/chess/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/chess/Horse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/chess/King.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/chess/Pawn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/chess/Piece.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/chess/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/chess/Queen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/chess/Rook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/chess/Spot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/chess/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerEarth/ijPair.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/HackerRank/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Ideone.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/InnerClass/CheckPerson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/InnerClass/CheckPersonEligibleForSelectiveService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/InnerClass/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/InnerClass/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Interval.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/IntervalComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Java8Latest/ForEach$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Java8Latest/ForEach.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Java8Latest/MyConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/JavaBreaks/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/LRU/Cache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/LRU/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/LRU/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Lexicographic_Permutation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/MessageData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Practice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ProducerConsumer/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ProducerConsumer/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ProducerConsumer/ProducerConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Serialization/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Serialization/SerializeDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/StreamExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/VCSSyncPreconditionsDTOMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/VCSSyncPreconditionsDTONoMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cache/LRU.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cache/LRUCache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cache/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/convertToJSON/Sample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/LinkedList/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/LinkedList/ReverseList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/Map/Custom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/Map/HashMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/Map/Key.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/Tree/BTreePrinter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/Tree/BTreePrinterTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/Tree/BinaryTreeToBST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/Tree/LeftViewPrint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/Tree/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/Tree/TreeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/Trie/Trie.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/Trie/TrieNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/Trie/TrieTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/graph/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/graph/Graph1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/graph/GraphTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/graph/ShortestPathGraphArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/graph/one/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/graph/one/IntegerNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dataStructures/graph/one/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/generics/Class1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/generics/Class2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/generics/ComparatorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/generics/DifferentObjectsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/generics/Empl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/generics/GenericMethodTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/generics/MySalaryComp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/generics/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/go_jek/AvailableSlots.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/go_jek/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/go_jek/CarParkingLot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/go_jek/Go_jeck_demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/go_jek/Slot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/go_jek/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/greyOrange/GreyOrangeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hansel/FirstSolution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hansel/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hansel/NodeMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hansel/SecondSolution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/hansel/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interviewbit/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/interviewbit/LongestArithmeticProgression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/AbstractInterfaceRunnable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/AlternateNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/AlternateNumberPassing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ConcurrentHashMap/ConcurrentHashMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ConcurrentHashMap/Key.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ConcurrentHashMap/MapDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ConcurrentHashMap/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/EagerInitializedSingleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ExecutorService/MyCallable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ExecutorService/RejectedExecutionHandlerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ExecutorService/ThreadPoolExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ExecutorService/WorkerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/MyCallable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/Number.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/Print.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/PrintAB/PrintABClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/PrintAB/PrintABDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/PrintAB/PrintResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/Printer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ProducerConsumer/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ProducerConsumer/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ProducerConsumer/ProducerConsumerWaitNotify.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ProducerConsumer/onemore/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ProducerConsumer/onemore/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ProducerConsumer/onemore/Queue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ProducerConsumer/onemore/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/Queue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/RejectedExecutionHandlerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/SharingThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/SimpleThreadPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/Singleton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/TestWorkerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ThreadPoolExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/ThreadedSend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/VolatileTest$ChangeListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/VolatileTest$ChangeMaker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/VolatileTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/Worker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/WorkerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/atomic/AtomicTest$ChangeListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/atomic/AtomicTest$ChangeMaker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/atomic/AtomicTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/atomic/AtomicTestBoolean$ChangeListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/atomic/AtomicTestBoolean$ChangeMaker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/atomic/AtomicTestBoolean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/barrier/Barrier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/barrier/BarrierDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/barrier/Train.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/get.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/getSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/getSetImplemented.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/latch/CountDownLatchDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/latch/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/lock/Lock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/lock/LockExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/lock/OneThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/printClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/set.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/threadpool/QueueOfTasks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/threadpool/ThreadPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/multithreading/threadpool/WorkerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/stream/Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/B.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/C.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/Immutable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/Implemented.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/test/Main.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,60 +783,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Light.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Light.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#137#138#0" expanded="true" />
-                <element signature="e#110#111#0" expanded="true" />
-                <element signature="e#138#139#0" expanded="true" />
-                <element signature="e#179#180#0" expanded="true" />
-                <element signature="e#213#214#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OffState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OffState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OnState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OnState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/State.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -116,38 +819,31 @@
         <option value="$PROJECT_DIR$/src/main/java/com/Snapwiz/SnapwizStringRepitition.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/Snapwiz/SnapwizStringRepitition2.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/Snapwiz/SnapwizRepeatedCharacters.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/State.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Command.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/OnState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/OnCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/OffCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/RemoteControl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Mai.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/LifestyleActions.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/CityState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Weather.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Warm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/State.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OffState.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OnState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Light.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/state/DimState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/OffCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/OnCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Command.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/RemoteControl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Light.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/DimCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Mai.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1366" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,8 +921,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="RecentsManager">
@@ -250,7 +947,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Mai">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -350,60 +1047,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <module name="main" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_regexPattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Twisted Trial">
-      <module name="main" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <module name="main" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <module name="main" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
     <list>
       <item itemvalue="Application.PickingNumbers" />
       <item itemvalue="Application.StringRepitition" />
@@ -413,8 +1056,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Mai" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.SnapwizRepeatedCharacters" />
         <item itemvalue="Application.StringRepitition" />
         <item itemvalue="Application.PickingNumbers" />
@@ -435,8 +1078,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="11" />
@@ -446,29 +1088,53 @@
       <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.3561321" />
+      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.3565365" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.30937973" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.47931033" />
       <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info id="Designer" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="5" weight="0.4" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info anchor="bottom" id="Jelastic" order="2" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info id="Structure" order="5" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.35647058" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Capture Tool" order="0" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="8" visible="true" weight="0.4" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="0" />
       <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32941177" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32941177" />
+      <window_info anchor="right" id="Maven Projects" order="1" />
+      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.25" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Command and Design Pattern testing with new commands and new states." />
+    <option name="LAST_COMMIT_MESSAGE" value="Command and Design Pattern testing with new commands and new states." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -484,14 +1150,16 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/threadpool/ThreadPoolExample.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="1285" column="30" selection-start-line="1285" selection-start-column="30" selection-end-line="1285" selection-end-column="30" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/HackerEarth/Divisible.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/go_jek/Go_jeck_demo.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/threadpool/ThreadPoolExample.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/concurrent/LinkedBlockingQueue.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/threadpool/ThreadPoolExample.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/Collections.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -585,13 +1253,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Number.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Number.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dataStructures/graph/one/Node.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -676,174 +1338,134 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/HackerEarth/PickingNumbers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Snapwiz/SnapwizStringRepitition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Snapwiz/SnapwizRepeatedCharacters.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding>
+            <element signature="e#1707#1722#0" expanded="true" />
+            <element signature="e#1778#1801#0" expanded="true" />
+            <element signature="e#2545#2553#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/chainOfResponsibility/atm/NotePile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/State.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/chainOfResponsibility/atm/Atm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OnState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="187">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/command/CommandDesign.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OffState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/OffCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/OnCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="9" />
-          <folding>
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#259#260#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Light.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Command.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="30" />
+        <state relative-caret-position="68">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/DimCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding>
+            <element signature="e#138#139#0" expanded="true" />
+            <element signature="e#171#172#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/RemoteControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="119">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding>
-            <element signature="e#182#183#0" expanded="true" />
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Mai.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/LifestyleActions.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/DimState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#142#143#0" expanded="true" />
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#236#237#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Warm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Weather.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/command/light/Light.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OffState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Light.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="17">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
-            <element signature="e#137#138#0" expanded="true" />
-            <element signature="e#110#111#0" expanded="true" />
-            <element signature="e#138#139#0" expanded="true" />
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
+            <element signature="e#101#102#0" expanded="true" />
+            <element signature="e#147#148#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/OnState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/DesignPattern/state/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>

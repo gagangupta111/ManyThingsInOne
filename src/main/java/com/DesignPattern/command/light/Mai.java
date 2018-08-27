@@ -5,19 +5,15 @@ public class Mai {
     public static void main(String[] args){
 
         Light light = new Light();
-        Command commandOn = new OnCommand(light);
-        Command commandOff = new OffCommand(light);
+        RemoteControl remoteControl = new RemoteControl(light);
 
-        RemoteControl remoteControl = new RemoteControl();
+        remoteControl.offCommand();
+        remoteControl.onCommand();
+        remoteControl.offCommand();
 
-        remoteControl.setCommand(commandOff);
-        remoteControl.pressButton();
-
-        remoteControl.setCommand(commandOn);
-        remoteControl.pressButton();
-
-        remoteControl.setCommand(commandOff);
-        remoteControl.pressButton();
+        Command command = new DimCommand();
+        remoteControl.addCommand("DIMM", command);
+        remoteControl.executeCommand("DIMM", command);
 
     }
 
