@@ -6,10 +6,12 @@ import java.util.Map;
 public class RemoteControl {
 
     private Light light;
+    private String name;
     private Map<String, Command> commands = new HashMap<>();
 
-    public RemoteControl(Light light) {
+    public RemoteControl(Light light, String name) {
         this.light = light;
+        this.name = name;
         commands.put("ON", new OnCommand());
         commands.put("OFF", new OffCommand());
     }

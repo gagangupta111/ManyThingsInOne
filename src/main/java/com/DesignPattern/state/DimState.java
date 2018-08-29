@@ -8,7 +8,7 @@ public class DimState implements State {
 
     @Override
     public void change(Light light) {
+        light.lightOff();
         light.setState(OffState.INSTANCE);
-        System.out.println("Light is OFF!");
     }
 }

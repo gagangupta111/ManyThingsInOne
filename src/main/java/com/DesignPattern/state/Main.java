@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args){
 
-        Light light = new Light();
+        Light light = new Light("Light");
 
         light.pressButton();    // 1
         light.pressButton();    // 2

@@ -8,7 +8,7 @@ public class OffState implements State {
 
     @Override
     public void change(Light light) {
+        light.lightOn();
         light.setState(OnState.INSTANCE);
-        System.out.println("Light is ON!");
     }
 }

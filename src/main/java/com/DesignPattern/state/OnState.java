@@ -8,8 +8,8 @@ public class OnState implements State{
 
     @Override
     public void change(Light light) {
+        light.lightDimm();
         light.setState(DimState.INSTANCE);
-        System.out.println("Light is Dimm!");
     }
 
 }
