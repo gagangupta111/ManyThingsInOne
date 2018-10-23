@@ -6,8 +6,8 @@ public class FlatlandSpaceStations {
 
     public static void main(String[] args){
 
-        int [] array  = {0,6};
-        System.out.println(flatlandSpaceStations(7, array));
+        int [] array  = {68, 81, 46, 54, 30, 11, 19, 23, 22, 12, 38, 91, 48, 75, 26, 86, 29, 83, 62};
+        System.out.println(flatlandSpaceStations(95, array));
 
     }
 
@@ -27,9 +27,14 @@ public class FlatlandSpaceStations {
                 prev = now;
                 if (j < c.length-1){
                     j++;
-                }else return sd/2;
+                }
             }
 
+        }
+
+        if ((now-prev-1) > sd){
+            sd = now-prev-1;
+            return sd;
         }
 
         return sd/2;

@@ -8,6 +8,8 @@ public class Main {
 
     public static void main(String[] args){
 
+        System.out.println(returns7(77777));
+
         System.out.println(" Hello! ");
         List<Integer> list = new ArrayList<>();
         list.add(12);
@@ -25,6 +27,20 @@ public class Main {
 
         A a = new Implemented();
         a.show();
+
+    }
+
+    public static int returns7(int number){
+
+        char[] array = String.valueOf(number).toCharArray();
+        int total = 0;
+        for (char ch : array){
+            if (ch == '7'){
+                total++;
+            }
+        }
+
+        return total;
 
     }
 
