@@ -5,6 +5,9 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Streams {
 
@@ -42,11 +45,10 @@ public class Streams {
     }
 
     private static List<Integer> getlist(int max){
-        List<Integer> list = new ArrayList<>();
-        for(int i = 0; i < max; i++){
-            list.add(new Integer(i));
-        }
-        return list;
+        Random random = new Random();
+        return Stream.generate(() -> {
+            return random.nextInt();
+        }).limit(10).collect(Collectors.toList());
     }
 
     private static int sumStream(List<Integer> list) throws InterruptedException {
