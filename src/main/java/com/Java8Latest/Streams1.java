@@ -3,7 +3,6 @@ package com.Java8Latest;
 import java.util.Comparator;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -29,19 +28,22 @@ public class Streams1 {
 
 
 
-
+        System.out.println("=========================================");
         strings.stream().forEach(s -> {
             System.out.println(s);
         });
 
+        System.out.println("=========================================");
         integerList.stream().forEach(integer -> {
             System.out.println(integer);
         });
 
+        System.out.println("=========================================");
         variousList.stream().forEach(various -> {
             System.out.println(various);
         });
 
+        System.out.println("=========================================");
         variousList.stream().limit(5).forEach(various -> {
             System.out.println(various);
         });
@@ -93,6 +95,17 @@ public class Streams1 {
         variousList.stream().collect(Collectors.toMap(Various::getKey, Various::getAmount))
                 .forEach((integer, aDouble) -> System.out.println(" Key : " + integer + " Value : " + aDouble));
 
+        System.out.println("=========================================");
+        System.out.println(variousList.stream().allMatch(various -> various.getAmount() > 0.8));
+        System.out.println(variousList.stream().anyMatch(various -> various.getAmount() > 0.8));
+        System.out.println(variousList.stream().findAny());
+        System.out.println(variousList.stream().findFirst());
+        System.out.println(variousList.stream().noneMatch(various -> various.getAmount() > 1));
+
+        System.out.println(" found first " + variousList.stream()
+                .peek(various -> System.out.println(" filtering " + various))
+                .filter(various -> various.getKey()%2 == 0)
+                .findFirst());
 
     }
 

@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dec0f711-365f-4412-99ec-079b6f68ca07" name="Default" comment="Command and Design Pattern testing with new commands and new states.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Java8Latest/Streams1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/DoubleFloat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Java8Latest/Streams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Java8Latest/Streams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CheckedOutFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CheckedOutFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/MessageData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/MessageData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/VCSSyncPreconditionsDTOMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/VCSSyncPreconditionsDTOMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/VCSSyncPreconditionsDTONoMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/VCSSyncPreconditionsDTONoMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Java8Latest/Streams1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Java8Latest/Streams1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +30,8 @@
       <file leaf-file-name="Streams1.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/Java8Latest/Streams1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="64">
+              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#980#981#0" expanded="true" />
@@ -368,8 +359,8 @@
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="1" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.41426146" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.46519524" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.4057725" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.49235994" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.3582343" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
       <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.24205749" />
@@ -814,8 +805,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/Java8Latest/Streams1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="64">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#980#981#0" expanded="true" />
